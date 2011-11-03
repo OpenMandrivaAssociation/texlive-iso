@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /macros/latex/contrib/isostds/iso
+# catalog-date 2007-01-09 14:09:22 +0100
+# catalog-license lppl
+# catalog-version 2.4
 Name:		texlive-iso
 Version:	2.4
 Release:	1
@@ -59,6 +65,7 @@ LaTeX and these files.
 %doc %{_texmfdistdir}/source/latex/iso/iso4ht.ins
 %doc %{_texmfdistdir}/source/latex/iso/isoe.dtx
 %doc %{_texmfdistdir}/source/latex/iso/isoe.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -69,3 +76,5 @@ LaTeX and these files.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar makeindex tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
