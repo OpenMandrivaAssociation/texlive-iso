@@ -67,3 +67,17 @@ LaTeX and these files.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar makeindex tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 2.4-2
++ Revision: 754345
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 2.4-1
++ Revision: 718734
+- texlive-iso
+- texlive-iso
+- texlive-iso
+- texlive-iso
+
