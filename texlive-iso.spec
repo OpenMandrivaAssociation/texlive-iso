@@ -6,7 +6,7 @@
 # catalog-version 2.4
 Name:		texlive-iso
 Version:	2.4
-Release:	5
+Release:	6
 Summary:	Generic ISO standards typesetting macros
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/isostds/iso
