@@ -1,19 +1,13 @@
-# revision 15878
-# category Package
-# catalog-ctan /macros/latex/contrib/isostds/iso
-# catalog-date 2007-01-09 14:09:22 +0100
-# catalog-license lppl
-# catalog-version 2.4
 Name:		texlive-iso
-Version:	2.4
-Release:	11
+Version:	15878
+Release:	1
 Summary:	Generic ISO standards typesetting macros
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/isostds/iso
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/iso.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/iso.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/iso.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/iso.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/iso.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/iso.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -28,12 +22,12 @@ have been printed by ISO from camera-ready copy prepared using
 LaTeX and these files.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -60,24 +54,11 @@ LaTeX and these files.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar makeindex tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 2.4-2
-+ Revision: 754345
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 2.4-1
-+ Revision: 718734
-- texlive-iso
-- texlive-iso
-- texlive-iso
-- texlive-iso
-
