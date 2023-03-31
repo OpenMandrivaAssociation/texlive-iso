@@ -1,6 +1,6 @@
 Name:		texlive-iso
 Version:	15878
-Release:	1
+Release:	2
 Summary:	Generic ISO standards typesetting macros
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/isostds/iso
