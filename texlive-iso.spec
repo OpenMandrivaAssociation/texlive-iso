@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	Generic ISO standards typesetting macros
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/isostds/iso
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/isostds/iso
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/iso.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/iso.doc.r%{version}.tar.xz
